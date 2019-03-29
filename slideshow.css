@@ -1,0 +1,91 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* 父元素样式 */
+#slideshow {
+    height: 400px;
+    width: 600px;
+    margin: 100px auto;
+    /* border: 1px solid red; */
+    /* 必须填写 */
+    position: relative;
+    overflow: hidden;
+}
+
+/* ul样式 */
+ul li {
+    list-style: none;
+}
+
+.cx-slideshow {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.cx-slideshow li {
+    height: 100%;
+    float: left;
+}
+
+.cx-slideshow li a>img {
+    height: 100%;
+    width: 100%;
+}
+
+.cx-slideshow li a {
+    display: block;
+}
+
+.cx-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.cx-btn > span:first-of-type {
+    float: left;
+}
+
+.cx-btn > span:last-of-type {
+    float: right;
+}
+
+
+/* 字体图标样式 */
+@font-face {
+    font-family: 'icomoon';
+    src:  url('fonts/icomoon.eot?hd8xq4');
+    src:  url('fonts/icomoon.eot?hd8xq4#iefix') format('embedded-opentype'),
+      url('fonts/icomoon.ttf?hd8xq4') format('truetype'),
+      url('fonts/icomoon.woff?hd8xq4') format('woff'),
+      url('fonts/icomoon.svg?hd8xq4#icomoon') format('svg');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  [class^="icon-"], [class*=" icon-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .icon-arrow-right:before {
+    content: "\ea34";
+  }
+  .icon-arrow-left:before {
+    content: "\ea38";
+  }
+  
