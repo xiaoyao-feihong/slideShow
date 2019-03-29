@@ -1,21 +1,3 @@
-//制作轮播图流程
-/** 
- * 1.传入一个html元素作为父元素，图片路径数组（必填）
- * 2.改变尺寸的方法：宽高不传使用默认值（400，600）
- * 3.格式： 
- * let slide1 = new Slide({
-            id: 'slideshow',
-            direction: 'left/right',
-            srcArr: [], 
-            hrefArr: [], 
-            time: 2000, 
-            btnHeight: 80, 
-            btnWidth: 80, 
-            btnSize: 30 ,
-            btnColor: 'white',
-            btnBgcolor: 'rgba(1,1,1,.7)'
-})
- * **/
 
 class SlideShow {
     constructor(obj) {
@@ -39,7 +21,7 @@ class SlideShow {
         //对链接的处理
         if (obj.hrefArr) {
             this.hrefArr = obj.hrefArr
-        }else {
+        } else {
             this.hrefArr = []
             for (let i = 0; i < this.length; i++) {
                 this.hrefArr.push('javascript:;')
@@ -150,9 +132,3 @@ class SlideShow {
         }
     }
 }
-
-let slide1 = new SlideShow({
-    id: 'slideshow',
-    srcArr: ["./images/lakes.jpg", "./images/flowers.jpg", "./images/waterfall.jpg", "./images/sunrise.png", "./images/weather.jpg"],
-    // direction: 'left'
-})
